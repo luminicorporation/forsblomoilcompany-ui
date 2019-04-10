@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/core';
 
-import Content from './content';
 import { useResizeEvent } from '../hooks/useResizeEvent';
 import { List, Item } from './common/horizontalList';
 import { ExternalAnchor } from './common/anchor';
@@ -31,25 +30,17 @@ const Footer = () => {
       style={{ display: hideFooter ? 'none' : 'block' }}
       css={isFixed === true ? fixedStyles : null}
     >
-      <Content
-        css={css`
-          padding: 0;
-        `}
-      >
-        <article>
-          <List>
-            <Item>
-              © {new Date().getFullYear()} Nils Forsblom Research Companies,
-              Saudi Arabia
-            </Item>
-            <Item>
-              <ExternalAnchor href="mailto:nils@adtile.me?subject=Inquiries to Forsblom Oil Company">
-                research@forsblomoilcompany.me
-              </ExternalAnchor>
-            </Item>
-          </List>
-        </article>
-      </Content>
+      <List>
+        <Item>
+          © {new Date().getFullYear()} Nils Forsblom Research Companies, Saudi
+          Arabia
+        </Item>
+        <Item>
+          <ExternalAnchor href="mailto:nils@adtile.me?subject=Inquiries to Forsblom Oil Company">
+            research@forsblomoilcompany.me
+          </ExternalAnchor>
+        </Item>
+      </List>
     </footer>
   );
 };

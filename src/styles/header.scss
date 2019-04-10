@@ -1,5 +1,24 @@
+@import 'media-queries';
+@import 'typefaces.scss';
+
 .header {
   color: white;
-  // background-image: url('../images/background.png');
-  // background-size: cover;
+  padding-top: 6.3rem;
+  padding-bottom: 6.3rem;
+}
+
+.title {
+  @extend %tf-asapcondensed-normal-700;
+  text-transform: uppercase;
+  color: #121212;
+
+  font-size: 2.15rem;
+  text-align: center;
+  @include device-WIDER-than(mobile) {
+    text-align: left;
+    font-size: 3.5rem;
+    line-height: 0.85;
+    letter-spacing: -2px;
+    margin: 0;
+  }
 }

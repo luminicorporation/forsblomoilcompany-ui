@@ -1,30 +1,11 @@
 @import 'media-queries';
-
-.title {
-  text-transform: uppercase;
-  color: #121212;
-
-  margin-bottom: 2.3rem;
-  font-size: 2.15rem;
-  text-align: center;
-  @include device-WIDER-than(mobile) {
-    margin-bottom: 5.32rem;
-    font-size: 2.39rem;
-    text-align: left;
-    line-height: 1.08;
-  }
-}
-
-.horizontal-separator {
-  height: 0.3rem;
-  background-color: #121212;
-  margin-bottom: 2.45rem;
-  @include device-WIDER-than(mobile) {
-    margin-bottom: 3.8rem;
-  }
-}
+@import 'typefaces.scss';
 
 .paragraph {
+  .subtitle:not(:first-of-type) {
+    margin-top: 1.8rem;
+  }
+
   line-height: 1.5;
   width: 100%;
   margin-right: 0;
@@ -34,10 +15,10 @@
   margin-bottom: 0;
   @include device-WIDER-than(mobile) {
     padding: 0;
-    width: 57%;
-    margin-right: 2rem;
-    font-size: 1.265rem;
+    margin: 0;
+    width: 50%;
+    font-size: 1.13rem;
     text-align: left;
-    line-height: 1.67;
+    line-height: 1.15;
   }
 }

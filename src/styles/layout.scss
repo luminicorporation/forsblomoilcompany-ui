@@ -1,9 +1,19 @@
 @import 'media-queries';
+@import 'typefaces';
 
 .main {
   background-color: white;
   padding-top: 3.85rem;
   @include device-WIDER-than(mobile) {
-    padding-top: 5.8rem;
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+  }
+}
+
+.header,
+.main {
+  @include device-WIDER-than(mobile) {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
