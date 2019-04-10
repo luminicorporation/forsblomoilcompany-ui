@@ -9,17 +9,20 @@ import Content from '../components/content';
 import '../styles/index.scss';
 // import { ExternalAnchor } from '../components/common/anchor';
 
-// const NoWrap = p => <span style={{ whiteSpace: 'nowrap' }}>{p.children}</span>;
+const NoWrap = p => <span style={{ whiteSpace: 'nowrap' }}>{p.children}</span>;
 
 const IndexPage = () => (
-  <Layout>
+  <Layout
+    siteTitle={
+      <>
+        Forsblom
+        <br />
+        <NoWrap>Oil Company</NoWrap>
+      </>
+    }
+  >
     <Content>
       <SEO title="Home" keywords={[`theoretical`, `science`, `research`]} />
-      <h1 className="neotech-med title">
-        Forsblom
-        <br /> Oil Company
-      </h1>
-      <hr className="horizontal-separator" />
       <article
         css={css`
           display: flex;

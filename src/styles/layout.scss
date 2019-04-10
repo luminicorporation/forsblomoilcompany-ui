@@ -1,6 +1,7 @@
 @import 'media-queries';
 
 .main {
+  background-color: white;
   padding-top: 3.85rem;
   @include device-WIDER-than(mobile) {
     padding-top: 5.8rem;
