@@ -1,9 +1,9 @@
 {
-  "name": "lumini",
+  "name": "forsblomoilcompany",
   "private": true,
   "description": "Theoretical science research for advanced technologies. We are developing foundational technologies, applying new thinking for near-future applications.",
   "version": "0.1.0",
-  "author": "Nils Forsblom <nils@lumini.me>",
+  "author": "Nils Forsblom <nils@forsblomoilcompany.me>",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
@@ -31,7 +31,7 @@
     "prettier": "^1.16.4"
   },
   "keywords": [
-    "lumini"
+    "forsblomoilcompany"
   ],
   "license": "MIT",
   "scripts": {

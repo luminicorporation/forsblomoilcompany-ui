@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1ebc4d83-6bb7-4df9-8517-1aad72b378da/deploy-status)](https://app.netlify.com/sites/lumini/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/79a53dd7-0faa-447f-9ad3-1d5e90b91a6c/deploy-status)](https://app.netlify.com/sites/forsblomoilcompany/deploys)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">

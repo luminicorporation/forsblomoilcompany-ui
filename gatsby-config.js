@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Lumini`,
-    description: `Theoretical science research for advanced technologies. We are developing foundational technologies, applying new thinking for near-future applications.`,
+    title: `Forsblom Oil Company`,
+    description: `Research on hyper-sensitive quantum particle to track location.`,
     author: `@nilsforsblom`,
     authorId: `14014932`, // http://gettwitterid.com/?user_name=nilsforsblom
-    siteUrl: `http://lumini.me`, // no trailing slash && must be http!
-    socialMediaCard: `lumini-card.jpg` // must be jpg!
+    siteUrl: `http://forsblomoilcompany.me`, // no trailing slash && must be http!
+    socialMediaCard: `forsblomoilcompany-card.jpg` // must be jpg!
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `lumini`,
-        short_name: `lumini`,
+        name: `forsblomoilcompany`,
+        short_name: `forsblomoilcompany`,
         start_url: `/`,
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,

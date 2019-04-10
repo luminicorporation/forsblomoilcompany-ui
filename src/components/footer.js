@@ -38,11 +38,13 @@ const Footer = () => {
       >
         <article>
           <List>
-            <Item>© {new Date().getFullYear()} Lumini Corporation Inc.</Item>
-            <Item className="hide-on-mobile">California, United States.</Item>
             <Item>
-              <ExternalAnchor href="mailto:nils@adtile.me?subject=Inquiries to Lumini Research">
-                research@lumini.me
+              © {new Date().getFullYear()} Nils Forsblom Research Companies,
+              Saudi Arabia
+            </Item>
+            <Item>
+              <ExternalAnchor href="mailto:nils@adtile.me?subject=Inquiries to Forsblom Oil Company">
+                research@forsblomoilcompany.me
               </ExternalAnchor>
             </Item>
           </List>
