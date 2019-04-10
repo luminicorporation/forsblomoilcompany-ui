@@ -7,42 +7,53 @@ body {
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
 }
 
-@font-face {
-  font-family: 'NeoTech';
-  font-weight: 600;
-  font-style: normal;
-  font-display: fallback; // https://css-tricks.com/font-display-masses/#article-header-id-1
-  src: url('../fonts/NeoTech-Medium.otf') format('opentype');
+@mixin typeface($name, $weight, $style, $src, $type) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: fallback; // https://css-tricks.com/font-display-masses/#article-header-id-1
+    src: url($src) format($type);
+  }
+
+  // This will create placeholders to extend, e.g.
+  // %tf-asapcondensed-normal-400, %tf-asapcondensed-normal-700, ...
+  %tf-#{to-lower-case($name)}-#{$style}-#{$weight} {
+    font-family: $name, 'Helvetica', 'Arial', sans-serif;
+    font-weight: $weight;
+    font-style: $style;
+  }
 }
 
-.neotech-med {
-  font-family: 'NeoTech', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  font-weight: 300;
-  font-style: normal;
-  font-display: fallback; // https://css-tricks.com/font-display-masses/#article-header-id-1
-  src: url('../fonts/OpenSans-Light.ttf') format('truetype');
-}
-
-body,
-.opensans-light {
-  font-family: 'OpenSans', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  font-weight: 600;
-  font-style: normal;
-  font-display: fallback; // https://css-tricks.com/font-display-masses/#article-header-id-1
-  src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
-}
-
-.opensans-semibold {
-  font-family: 'OpenSans', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 600;
-}
+// %tf-asapcondensed-normal-400
+@include typeface(
+  'AsapCondensed',
+  400,
+  normal,
+  '../fonts/AsapCondensed-Regular.ttf',
+  'truetype'
+);
+// %tf-asapcondensed-normal-500
+@include typeface(
+  'AsapCondensed',
+  500,
+  normal,
+  '../fonts/AsapCondensed-Medium.ttf',
+  'truetype'
+);
+// %tf-asapcondensed-normal-600
+@include typeface(
+  'AsapCondensed',
+  600,
+  normal,
+  '../fonts/AsapCondensed-SemiBold.ttf',
+  'truetype'
+);
+// %tf-asapcondensed-normal-700
+@include typeface(
+  'AsapCondensed',
+  700,
+  normal,
+  '../fonts/AsapCondensed-Bold.ttf',
+  'truetype'
+);
