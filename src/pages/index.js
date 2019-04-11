@@ -41,6 +41,8 @@ const IndexPage = () => (
           We’re engineering new hyper-sensitive quantum particle which can
           determine your location without the use of satellite signals.
         </p>
+        <br />
+        <p>A Nils Forsblom Research Company.</p>
       </div>
     </article>
   </Layout>
