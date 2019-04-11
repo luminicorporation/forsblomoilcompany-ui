@@ -19,9 +19,15 @@ body {
   @include device-NARROWER-than(mobile) {
     background: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45)),
       url('../images/overlay-mobile.png');
-    background-size: contain;
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: 50% 100%;
+    background-position: 50% 0%;
+  }
+
+  &::before {
+    @include device-NARROWER-than(mobile) {
+      content: none;
+    }
   }
 
   // fade direct children of body to allow seeing through
