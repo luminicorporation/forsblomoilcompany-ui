@@ -4,7 +4,6 @@
 .main {
   padding-top: 3.1rem;
   @include device-WIDER-than(mobile) {
-    background-color: white;
     padding-top: 3.25rem;
     padding-bottom: 3.25rem;
   }

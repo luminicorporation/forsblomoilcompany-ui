@@ -9,6 +9,10 @@
   @include device-WIDER-than(mobile) {
     padding-top: 5.4rem;
     padding-bottom: 5.4rem;
+
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: 50% 0;
   }
 }
 
