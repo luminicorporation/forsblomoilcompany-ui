@@ -2,9 +2,9 @@
 @import 'typefaces';
 
 .main {
-  background-color: white;
   padding-top: 3.85rem;
   @include device-WIDER-than(mobile) {
+    background-color: white;
     padding-top: 3.6rem;
     padding-bottom: 3.6rem;
   }
