@@ -1,5 +1,32 @@
+@import 'media-queries';
+
 body {
-  background-image: url('../images/background.png');
-  background-size: cover;
-  background-position: 50% 0;
+  height: fit-content;
+  overflow: hidden;
+
+  &::before {
+    content: ' ';
+    position: fixed;
+    width: 110vw;
+    height: 110vh;
+    top: -5vh;
+    left: -5vw;
+    background-image: url('../images/background-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: -10;
+    @include device-WIDER-than(mobile) {
+      content: none;
+    }
+  }
+
+  @include device-WIDER-than(mobile) {
+    height: auto;
+    overflow: auto;
+
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: 50% 0;
+  }
 }
