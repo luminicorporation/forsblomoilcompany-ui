@@ -32,6 +32,7 @@
   color: white;
 
   @include device-WIDER-than(mobile) {
+    margin: 0;
     height: 2.1rem;
     display: flex;
     align-items: center;
