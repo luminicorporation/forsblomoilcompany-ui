@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { css } from '@emotion/core';
 
-import { useResizeEvent } from '../hooks/useResizeEvent';
+import { useThrottledResizeEvent } from '../hooks/useResizeEvent';
 import { List, Item } from './common/horizontalList';
 import { ExternalAnchor } from './common/anchor';
 import '../styles/footer.scss';
@@ -13,21 +13,27 @@ const fixedStyles = css`
 `;
 
 const Footer = () => {
+  const footerRef = useRef();
   const [isFixed, setIsFixed] = useState(null);
   const hideFooter = isFixed === null;
 
-  useResizeEvent(() => {
+  useThrottledResizeEvent(() => {
     if (typeof document !== 'undefined') {
-      setIsFixed(
-        document.documentElement.clientHeight > document.body.clientHeight
+      const viewportHeight = document.documentElement.clientHeight;
+      const contentHeight = Array.prototype.reduce.call(
+        footerRef.current.parentElement.children,
+        (accum, child) => accum + child.clientHeight,
+        0
       );
+      setIsFixed(viewportHeight > contentHeight);
     }
   });
 
   return (
     <footer
+      ref={footerRef}
       className="footer"
-      style={{ display: hideFooter ? 'none' : 'block' }}
+      style={{ visibility: hideFooter ? 'hidden' : 'visible' }}
       css={isFixed === true ? fixedStyles : null}
     >
       <List>
