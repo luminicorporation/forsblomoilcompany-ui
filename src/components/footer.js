@@ -4,6 +4,8 @@ import { css } from '@emotion/core';
 import { useThrottledResizeEvent } from '../hooks/useResizeEvent';
 import { List, Item } from './common/horizontalList';
 import { ExternalAnchor } from './common/anchor';
+import { NoWrap } from './common/noWrap';
+
 import '../styles/footer.scss';
 
 const fixedStyles = css`
@@ -38,8 +40,8 @@ const Footer = () => {
     >
       <List>
         <Item>
-          © {new Date().getFullYear()} Nils Forsblom Research Companies, Saudi
-          Arabia
+          © {new Date().getFullYear()} Nils Forsblom Research Companies,{' '}
+          <NoWrap>Saudi Arabia</NoWrap>
         </Item>
         <Item>
           <ExternalAnchor href="mailto:nils@adtile.me?subject=Inquiries to Forsblom Oil Company">

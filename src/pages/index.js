@@ -5,10 +5,9 @@ import { css } from '@emotion/core';
 import GreaterThanCaret from '../components/greaterThanCaret';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { NoWrap } from '../components/common/noWrap';
 import '../styles/index.scss';
 // import { ExternalAnchor } from '../components/common/anchor';
-
-const NoWrap = p => <span style={{ whiteSpace: 'nowrap' }}>{p.children}</span>;
 
 const IndexPage = () => (
   <Layout

@@ -1,40 +1,42 @@
 @import 'media-queries';
 @import 'typefaces';
 
-// .footer {
-//   background-color: #121212;
-//   margin-top: 1.9rem;
-//   @include device-WIDER-than(mobile) {
-//     margin-top: 2.55rem;
-//   }
-// }
+.footer {
+  &::before {
+    content: ' ';
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 75%;
+    margin: 2.6rem auto;
+
+    @include device-WIDER-than(mobile) {
+      content: none;
+    }
+  }
+}
 
 .horizontal-list {
   font-weight: 600;
   letter-spacing: -0.12px;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 0.84rem;
+  padding: 0 1rem;
+  margin: 0;
+  margin-bottom: 4.2rem;
 
   width: 100%;
-  margin: 0;
-  padding: 0 0.9rem;
   text-transform: uppercase;
   list-style-type: none;
   color: white;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.65rem;
-
-  height: 3.72rem;
   @include device-WIDER-than(mobile) {
     height: 2.1rem;
-  }
-
-  // @include device-NARROWER-than(mobile) {
-  //   padding: 0 0.8rem;
-  // }
-
-  @include device-WIDER-than(mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
     font-size: 0.65rem;
 
     background-image: url('../images/background.png');
@@ -44,11 +46,8 @@
 }
 
 .horizontal-list_item {
-  display: inline;
+  display: inline-block;
   margin: 0;
-  &:not(:first-of-type) {
-    margin-left: 1rem;
-  }
 
   @include device-NARROWER-than(mobile) {
     &.hide-on-mobile {
