@@ -3,22 +3,28 @@
 
 .header {
   color: white;
-  padding-top: 6.3rem;
-  padding-bottom: 6.3rem;
+  padding-top: 3.8rem;
+  padding-bottom: 0rem;
+
+  @include device-WIDER-than(mobile) {
+    padding-top: 5.4rem;
+    padding-bottom: 5.4rem;
+  }
 }
 
 .title {
   @extend %tf-asapcondensed-normal-700;
   text-transform: uppercase;
   color: #121212;
+  margin: 0;
 
-  font-size: 2.15rem;
+  font-size: 3rem;
   text-align: center;
+  line-height: 0.95;
   @include device-WIDER-than(mobile) {
     text-align: left;
-    font-size: 3.5rem;
-    line-height: 0.85;
-    letter-spacing: -2px;
-    margin: 0;
+    font-size: 3rem;
+    line-height: 0.9;
+    letter-spacing: -1px;
   }
 }

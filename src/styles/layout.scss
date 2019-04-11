@@ -2,18 +2,18 @@
 @import 'typefaces';
 
 .main {
-  padding-top: 3.85rem;
+  padding-top: 3.1rem;
   @include device-WIDER-than(mobile) {
     background-color: white;
-    padding-top: 3.6rem;
-    padding-bottom: 3.6rem;
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
   }
 }
 
 .header,
 .main {
   @include device-WIDER-than(mobile) {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 5.3rem;
+    padding-right: 5.3rem;
   }
 }

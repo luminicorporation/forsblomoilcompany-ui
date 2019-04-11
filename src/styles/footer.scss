@@ -27,7 +27,7 @@
 
   height: 3.72rem;
   @include device-WIDER-than(mobile) {
-    height: 2.7rem;
+    height: 2.1rem;
   }
 
   // @include device-NARROWER-than(mobile) {
@@ -35,7 +35,7 @@
   // }
 
   @include device-WIDER-than(mobile) {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
   }
 }
 

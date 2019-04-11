@@ -3,22 +3,24 @@
 
 .paragraph {
   .subtitle:not(:first-of-type) {
-    margin-top: 1.8rem;
+    margin-top: 1.7rem;
   }
 
   line-height: 1.5;
+  letter-spacing: -0.3px;
   width: 100%;
   margin-right: 0;
-  font-size: 1.25rem;
+  margin-bottom: 0;
+  font-size: 1.35rem;
   text-align: center;
   padding: 0 1.2rem;
-  margin-bottom: 0;
   @include device-WIDER-than(mobile) {
     padding: 0;
     margin: 0;
     width: 50%;
-    font-size: 1.13rem;
+    font-size: 1rem;
     text-align: left;
     line-height: 1.15;
+    letter-spacing: -0.1px;
   }
 }
