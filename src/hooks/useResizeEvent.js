@@ -4,6 +4,8 @@ import throttle from 'lodash.throttle';
 export const useResizeEvent = handler => {
   useLayoutEffect(() => {
     handler(null);
+    window.addEventListener('load', handler, { passive: true });
+    window.addEventListener('DOMContentLoaded', handler, { passive: true });
     window.addEventListener('resize', handler, { passive: true });
     return () => window.removeEventListener('resize', handler);
   }, []);
