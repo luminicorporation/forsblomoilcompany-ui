@@ -6,6 +6,7 @@ export const useResizeEvent = handler => {
     handler(null);
     window.addEventListener('load', handler, { passive: true });
     window.addEventListener('DOMContentLoaded', handler, { passive: true });
+    window.addEventListener('orientationchange', handler, { passive: true });
     window.addEventListener('resize', handler, { passive: true });
     return () => window.removeEventListener('resize', handler);
   }, []);
