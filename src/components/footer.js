@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { css } from '@emotion/core';
+import getDimensions from 'get-dimensions';
 
 import { useThrottledResizeEvent } from '../hooks/useResizeEvent';
 import { List, Item } from './common/horizontalList';
@@ -24,7 +25,7 @@ const Footer = () => {
       const viewportHeight = document.documentElement.clientHeight;
       const contentHeight = Array.prototype.reduce.call(
         footerRef.current.parentElement.children,
-        (accum, child) => accum + child.clientHeight,
+        (accum, child) => accum + getDimensions(child).outerHeight,
         0
       );
       setIsFixed(viewportHeight > contentHeight);
