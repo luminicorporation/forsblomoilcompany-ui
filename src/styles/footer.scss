@@ -16,6 +16,14 @@
   }
 }
 
+.footer--fixed {
+  @include device-WIDER-than(mobile) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
 .horizontal-list {
   font-weight: 600;
   letter-spacing: -0.12px;

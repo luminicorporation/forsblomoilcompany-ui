@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { css } from '@emotion/core';
 import getDimensions from 'get-dimensions';
+import cx from 'classnames';
 
 import { useThrottledResizeEvent } from '../hooks/useResizeEvent';
 import { List, Item } from './common/horizontalList';
@@ -8,12 +8,6 @@ import { ExternalAnchor } from './common/anchor';
 import { NoWrap } from './common/noWrap';
 
 import '../styles/footer.scss';
-
-const fixedStyles = css`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-`;
 
 const Footer = () => {
   const footerRef = useRef();
@@ -35,9 +29,8 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="footer"
+      className={cx('footer', { 'footer--fixed': !!isFixed })}
       style={{ visibility: hideFooter ? 'hidden' : 'visible' }}
-      css={isFixed === true ? fixedStyles : null}
     >
       <List>
         <Item>
