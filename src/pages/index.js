@@ -31,6 +31,9 @@ const IndexPage = () => (
       <GreaterThanCaret />
       <div className="paragraph">
         <p className="subtitle">
+          <strong>The Digital Oil Fields of the Future</strong>
+        </p>
+        <p className="subtitle">
           <strong>SEC NO. 1 — TEST NO. 3</strong>
         </p>
         <p>Research, Test, and Steam Site.</p>
