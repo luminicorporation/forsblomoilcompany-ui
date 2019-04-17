@@ -16,6 +16,10 @@ const IndexPage = () => (
         Forsblom
         <br />
         <NoWrap>Oil Company</NoWrap>
+        <br />
+        <span className="tagline">
+          Digital Oil Fields <NoWrap>of the Future</NoWrap>
+        </span>
       </>
     }
   >
@@ -30,9 +34,6 @@ const IndexPage = () => (
     >
       <GreaterThanCaret />
       <div className="paragraph">
-        <p className="subtitle">
-          <strong>The Digital Oil Fields of the Future</strong>
-        </p>
         <p className="subtitle">
           <strong>SEC NO. 1 — TEST NO. 3</strong>
         </p>
